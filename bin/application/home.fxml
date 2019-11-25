@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="707.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.homecontrol">
+   <children>
+      <AnchorPane fx:id="cliens" layoutX="21.0" layoutY="78.0" prefHeight="282.0" prefWidth="245.0" style="-fx-background-color: beige;" />
+      <Button fx:id="new_cmd" layoutX="497.0" layoutY="517.0" mnemonicParsing="false" onAction="#new_click" text="effectuer une commande" />
+      <Button fx:id="save" layoutX="497.0" layoutY="478.0" mnemonicParsing="false" onAction="#save_on" text="sauvgarder mes donées" />
+      <Button fx:id="load" layoutX="498.0" layoutY="435.0" mnemonicParsing="false" onAction="#load_on" text="importer mes donneées" />
+      <Button fx:id="add_some" layoutX="170.0" layoutY="517.0" mnemonicParsing="false" onAction="#add_some" text="ajouter des mets et supplements" />
+      <AnchorPane layoutX="-6.0" prefHeight="66.0" prefWidth="719.0" style="-fx-border-color: #34495E; -fx-background-color: #34495E;">
+         <children>
+            <ComboBox fx:id="filter" layoutX="416.0" layoutY="19.0" onAction="#ichanged" prefHeight="28.0" prefWidth="263.0" />
+            <Label layoutX="110.0" layoutY="16.0" text="Tout les commandes" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

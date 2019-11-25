@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="602.0" style="-fx-background-color: #ECECEC; -fx-border-color: #34495E; -fx-border-width: 15;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.connectcontrol">
+   <children>
+      <Button fx:id="connect_cf" layoutX="446.0" layoutY="51.0" mnemonicParsing="false" onAction="#connection_f" text="connecter " textAlignment="CENTER" />
+      <Label layoutX="133.0" layoutY="189.0" prefHeight="18.0" prefWidth="115.0" text="Nom" textFill="#34495e" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Pane layoutX="6.0" layoutY="92.0" prefHeight="81.0" prefWidth="583.0" style="-fx-background-color: #34495E;">
+         <children>
+            <Label layoutX="88.0" layoutY="10.0" text="Bienvuenue" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="42.0" />
+               </font>
+            </Label>
+            <Label fx:id="repss" layoutX="410.0" layoutY="25.0" text="Label" textFill="#ff5050">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children></Pane>
+      <Label layoutX="133.0" layoutY="239.0" prefHeight="18.0" prefWidth="115.0" text="Prenom" textFill="#34495e" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="417.0" prefHeight="62.0" prefWidth="214.0" text="si vous avez un compte" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Century Gothic" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="14.0" prefHeight="18.0" prefWidth="312.0" text="Connection tant que client fidele" textFill="#34495e" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="294.0" layoutY="188.0" style="-fx-background-color: ghostwhite;" />
+      <TextField fx:id="prename" layoutX="294.0" layoutY="239.0" style="-fx-background-color: ghostwhite;" />
+      <TextField fx:id="codef" layoutX="168.0" layoutY="54.0" prefHeight="26.0" prefWidth="203.0" promptText="code de fidelite" style="-fx-background-color: ghostwhite;" />
+      <TextField fx:id="num" layoutX="294.0" layoutY="289.0" style="-fx-background-color: ghostwhite;" />
+      <RadioButton fx:id="radio" layoutX="152.0" layoutY="328.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="164.0" text="etudiant" />
+      <Label layoutX="133.0" layoutY="290.0" prefHeight="18.0" prefWidth="115.0" text="Numero" textFill="#34495e" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="inscrire" layoutX="117.0" layoutY="380.0" mnemonicParsing="false" onAction="#firstconnect" text="S'inscrire" textAlignment="CENTER" />
+      <Button fx:id="connect1" layoutX="408.0" layoutY="380.0" mnemonicParsing="false" onAction="#connection_n" text="se connecter" textAlignment="CENTER" />
+      <Label layoutX="45.0" layoutY="428.0" prefHeight="39.0" prefWidth="214.0" text="s'inscrire c'est gratuit" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
