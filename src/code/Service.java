@@ -2,6 +2,7 @@ package code;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public abstract class Service implements Reduction,Serializable{
@@ -47,4 +48,20 @@ public abstract class Service implements Reduction,Serializable{
 		nb_personne=nb;
 		menu = new ArrayList<Met>();
 	}
+	public double calculer_prix(){
+		Iterator<Met> it  = this.menu.iterator();
+		double p=0;
+		Met s;
+		System.out.println();
+		while( it.hasNext()){
+			s=it.next();
+			p=p+s.Calculer_prix();
+			System.out.println(p);
+		}
+		return(sur_plus(p));/// calcule prix avec surplus direct
+
+	}
+
+
+
 }
