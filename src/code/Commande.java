@@ -15,16 +15,18 @@ private boolean vip; // si client d'un client fidele ou pas
 public Service getService(){
 	return  service;
 }
+
 public Commande(int id,Client c ,Service s) {
 	this.id=id;
-	setClient(c);
+	this.client = c ;
 	client_code=c.getNom()+c.getPrenom()+c.getNumero();
 	service=s;
-	try { 
-		 ((Client_fidele)c).afficher_info();
-		 vip=true;
-	}catch(Exception e){
-		vip=false;
+
+	if(c instanceof Client_fidele){
+		vip=true;
+	}
+	else{
+		vip = false ;
 	}
 }
 public int getid() {

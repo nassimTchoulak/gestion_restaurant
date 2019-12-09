@@ -7,7 +7,6 @@ import java.util.Iterator;
 import java.util.ResourceBundle;
 import java.util.Map.Entry;
 
-import application.listofcontrol.choice5;
 import code.C_surplace;
 import code.Client;
 import code.Client_fidele;
@@ -21,9 +20,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
@@ -87,8 +84,8 @@ public class homecontrol implements Initializable{
 		
 		filter.getItems().add("tout");
 		filter.getItems().add("en attente");
-		filter.getItems().add("effectuées");
-		//("tout","en attente","effectuées");
+		filter.getItems().add("effectuï¿½es");
+		//("tout","en attente","effectuï¿½es");
 		filter.setValue("tout");
 		
 		
@@ -101,7 +98,7 @@ public class homecontrol implements Initializable{
 	public ObservableList<Client> get_date(){
 		Client ssl;
 		ObservableList<Client> ls = FXCollections.observableArrayList();
-		for (Entry<String, Client_fidele> entry : esi.cliens.entrySet())
+		for (Entry<String, Client_fidele> entry : esi.getCliens().entrySet())
 		{	 	 
 					ssl = entry.getValue();  
 					ls.add(ssl);
@@ -112,7 +109,7 @@ public class homecontrol implements Initializable{
 	}
 	public ObservableList<choice6> get_cmd(String s){
     	ObservableList<choice6> ls = FXCollections.observableArrayList();
-    	Iterator<Commande> it =this.esi.com.iterator();
+    	Iterator<Commande> it = this.esi.getCom().iterator();
     	Commande verif;
     	LocalDateTime now = LocalDateTime.now();
     	if( s=="tout") {
@@ -196,7 +193,7 @@ public class homecontrol implements Initializable{
 	    				setType("sur place");
 	    			}
 	    			else {
-	    				setType("livré");
+	    				setType("livrï¿½");
 	    			}
 	    		}
 	    		

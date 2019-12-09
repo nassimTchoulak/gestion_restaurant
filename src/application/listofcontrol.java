@@ -4,7 +4,6 @@ package application;
 
 import java.net.URL;
 import java.util.Iterator;
-import java.util.Map.Entry;
 import java.util.ResourceBundle;
 
 import code.C_surplace;
@@ -13,7 +12,6 @@ import code.Commande;
 import code.ESImeal;
 import code.Evenement;
 import code.Met;
-import code.Repas;
 import code.Service;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -43,7 +41,7 @@ public class listofcontrol implements Initializable {
     
     public ObservableList<choice5> get_data(){
     	ObservableList<choice5> ls = FXCollections.observableArrayList();
-    	Iterator<Commande> it = me.com.iterator();
+    	Iterator<Commande> it = me.getCom().iterator();
     	Commande verif;
     	while(it.hasNext()) {
     		verif =it.next();
@@ -79,7 +77,7 @@ public class listofcontrol implements Initializable {
     				setType("sur place");
     			}
     			else {
-    				setType("livré");
+    				setType("livrï¿½");
     			}
     		}
     		

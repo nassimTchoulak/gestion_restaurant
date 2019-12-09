@@ -3,7 +3,6 @@ package application;
 import java.io.IOException;
 import java.net.URL;
 
-import javafx.collections.ObservableList;
 import java.util.ResourceBundle;
 
 import code.Client;
@@ -49,7 +48,7 @@ public class connectcontrol implements Initializable {
 	    @FXML
 	    void connection_f(ActionEvent event) {
 	    	Client_fidele t ;
-	    	t=this.data.cliens.get(this.codef.getText());
+	    	t= this.data.getCliens().get(this.codef.getText());
 	    	if(t==null) {
 	    		this.repss.setText("compte non valide");
 	    	}
@@ -73,7 +72,7 @@ public class connectcontrol implements Initializable {
 	    @FXML
 	    void connection_n(ActionEvent event)  {
 	    	Client t ;
-	    	t=this.data.cliens_normal.get(this.name.getText()+this.prename.getText()+this.num.getText());
+	    	t= this.data.getCliens_normal().get(this.name.getText()+this.prename.getText()+this.num.getText());
 	    	if(t==null) {
 	    		this.repss.setText("compte non valide");
 	    	}
@@ -94,10 +93,10 @@ public class connectcontrol implements Initializable {
 	    void firstconnect(ActionEvent event) {
 	    		if((!this.name.getText().isEmpty())&&(!this.prename.getText().isEmpty())&&(!this.num.getText().isEmpty())){
 	    			
-	    			if(this.data.cliens_normal.get(name.getText()+prename.getText()+num.getText())==null) {
+	    			if(this.data.getCliens_normal().get(name.getText()+prename.getText()+num.getText())==null) {
 	    				Client you;
 	    				you=new Client(name.getText(), prename.getText(),num.getText(),this.radio.isSelected());
-	    				this.data.cliens_normal.put(name.getText()+prename.getText()+num.getText(), you);
+	    				this.data.getCliens_normal().put(name.getText()+prename.getText()+num.getText(), you);
 	    				try {
 							commandes fr =new commandes(this.data,you);
 							this.t.close();
