@@ -2,19 +2,69 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49eeaa0a-d779-4444-9f56-d5884ea154a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/controlsfx_8_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/application/choice2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/choice2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/choice2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/choice2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/add_met.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/add_metcontrol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/choice1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/choice1$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/choice1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/choice2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/choice3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/choice4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/commandecontrol$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/commandecontrol$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/commandecontrol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/commandes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/connect.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/connectcontrol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/homecontrol$choice6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/homecontrol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/listof.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/listofcontrol$choice5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/listofcontrol.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Boisson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/C_livre.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/C_surplace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Client_fidele.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Commande.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Dateexception.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/ESImeal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Evenement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Eventpersonneexception.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Events.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Heureexception.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Met.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Mois_jour.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Place.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Placeexception.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Reduction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Repas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Supplement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Table.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Tableexception.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Type_Boisson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Type_Repas.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/ESImeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ESImeal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/code/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Service.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tp_interface2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tp_interface2.iml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,6 +79,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -95,7 +146,7 @@
       <workItem from="1575754280858" duration="7809000" />
       <workItem from="1575833748612" duration="177000" />
       <workItem from="1575847451291" duration="2601000" />
-      <workItem from="1575913655590" duration="661000" />
+      <workItem from="1575913655590" duration="2663000" />
     </task>
     <servers />
   </component>

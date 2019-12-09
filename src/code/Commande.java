@@ -34,7 +34,7 @@ public int getid() {
 
 public void ajouter_met(Met met) {
 	try{
-	service.menu.add(met);}
+	service.add(met);}
 	catch (Exception e){
 		
 	}
@@ -44,7 +44,7 @@ public void ajouter_met(Met met) {
 
 public void supp_met(Met met){
 	try{
-		service.menu.remove(met);}
+		service.remove_menu(met);}
 		catch (Exception e){
 			
 		}
@@ -84,7 +84,7 @@ public boolean equals(Commande k) {
 	}
 }
 public int compareTo(Commande k ) {
-	return this.service.date.compareTo(k.service.date);
+	return this.service.get_real_date().compareTo(k.service.get_real_date());
 }
 public Client getClient() {
 	return client;
