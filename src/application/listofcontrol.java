@@ -6,13 +6,7 @@ import java.net.URL;
 import java.util.Iterator;
 import java.util.ResourceBundle;
 
-import code.C_surplace;
-import code.Client;
-import code.Commande;
-import code.ESImeal;
-import code.Evenement;
-import code.Met;
-import code.Service;
+import code.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -26,13 +20,13 @@ public class listofcontrol implements Initializable {
 
     @FXML
     private AnchorPane mybase;
-    private ESImeal me;
+    private IEsiMeal me;
     private Client cc;
 
     private TableView<choice5> pt;
     
     
-    public void set_all(ESImeal s,Client c) {
+    public void set_all(IEsiMeal s, Client c) {
     	me=s;
     	cc=c;
     	pt.getItems().addAll(this.get_data());
@@ -77,7 +71,7 @@ public class listofcontrol implements Initializable {
     				setType("sur place");
     			}
     			else {
-    				setType("livr�");
+    				setType("livré");
     			}
     		}
     		

@@ -17,6 +17,7 @@ import code.Client;
 import code.Client_fidele;
 import code.Commande;
 import code.ESImeal;
+import code.IEsiMeal;
 import code.Events;
 import code.Met;
 import code.Repas;
@@ -146,7 +147,7 @@ public class commandecontrol implements Initializable{
     
     private TableView<choice2> rt;
 
-    public ESImeal esi = new ESImeal();
+    public IEsiMeal esi = new ESImeal();
     
     public Client you;
     public Service now;
@@ -462,7 +463,7 @@ public class commandecontrol implements Initializable{
     	my_answer.setText(esi.confirmation_msg(cmdnow.getid(),you,cmdnow.getService()));
     }
     
-    public void set_all(ESImeal u,Client r) {
+    public void set_all(IEsiMeal u,Client r) {
     	this.esi=u;
     	you=r;
     	

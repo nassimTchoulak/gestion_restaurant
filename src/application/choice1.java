@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 
 
+import code.IEsiMeal;
 import org.controlsfx.control.CheckComboBox;
 import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
@@ -29,7 +30,7 @@ public class choice1 {
 	private Button bt; 
 	private TableView<choice1> vv;
 	private TableView<choice2> to;
-	private ESImeal sss;
+	private IEsiMeal sss;
 	
 	
 	public CheckComboBox<String> supps; 
@@ -52,7 +53,7 @@ public class choice1 {
 	public CheckComboBox<String> getSupps(){
 		return supps;
 	} 
-	public choice1(Repas r,ESImeal s,TableView<choice1> v,TableView<choice2> ml) {
+	public choice1(Repas r,IEsiMeal s,TableView<choice1> v,TableView<choice2> ml) {
 		/*val = new Repas(r.getNom(),true,r.nb_calories(),r.getPrix(),r.type);
 		/**/
 		vv=v;

@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 import code.Client;
 import code.Client_fidele;
 import code.ESImeal;
+import code.IEsiMeal;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -19,7 +20,7 @@ import javafx.scene.control.TextField;
 public class connectcontrol implements Initializable {
 
 	
-		private ESImeal data;
+		private IEsiMeal data;
 
 	    @FXML
 	    private Button connect_cf;
@@ -116,7 +117,7 @@ public class connectcontrol implements Initializable {
 	    
 	    
 	    private connect t;
-	    public void set_all(ESImeal s,connect t) {
+	    public void set_all(IEsiMeal s, connect t) {
 	    	this.data=s;
 	    	this.t=t;
 	    }

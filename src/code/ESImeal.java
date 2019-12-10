@@ -23,7 +23,7 @@ import java.util.TreeSet;
 import java.util.regex.Pattern;
 
 
-public class ESImeal implements Serializable{
+public class ESImeal implements Serializable,IEsiMeal{
 
 
 	private TreeSet<Commande> com = new TreeSet<Commande>();

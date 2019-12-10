@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import code.Client;
 import code.ESImeal;
+import code.IEsiMeal;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -11,7 +12,7 @@ import javafx.stage.Stage;
 
 public class commandes extends Stage {
 	Parent root ;
-	public commandes(ESImeal me,Client c) throws IOException {
+	public commandes(IEsiMeal me, Client c) throws IOException {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("commandes.fxml"));
 		//Parent root = (Parent) FXMLLoader.load(getClass().getResource("commandes.fxml"));
 		Parent root = (Parent) fxmlLoader.load();

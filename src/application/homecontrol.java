@@ -7,14 +7,7 @@ import java.util.Iterator;
 import java.util.ResourceBundle;
 import java.util.Map.Entry;
 
-import code.C_surplace;
-import code.Client;
-import code.Client_fidele;
-import code.Commande;
-import code.ESImeal;
-import code.Evenement;
-import code.Met;
-import code.Service;
+import code.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -29,7 +22,7 @@ import javafx.collections.FXCollections;
 
 public class homecontrol implements Initializable{
 	
-	public ESImeal esi = new ESImeal();
+	private IEsiMeal esi = new ESImeal();
 	
 	TableView<choice6> info ;
 	

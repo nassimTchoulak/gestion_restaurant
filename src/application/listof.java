@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import code.Client;
 import code.ESImeal;
+import code.IEsiMeal;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 
 public class listof extends Stage {
 	Parent root ;
-	public listof(ESImeal c,Client cc) throws IOException {
+	public listof(IEsiMeal c, Client cc) throws IOException {
 		FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("listof.fxml"));
 		//Parent root = (Parent) FXMLLoader.load(getClass().getResource("commandes.fxml"));
 		Parent root = (Parent) fxmlLoader.load();
