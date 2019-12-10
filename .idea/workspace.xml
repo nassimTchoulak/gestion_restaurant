@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49eeaa0a-d779-4444-9f56-d5884ea154a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/code/IEsiMeal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/add_met.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/add_met.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/add_metcontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/add_metcontrol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/choice1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/choice1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/commandecontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/commandecontrol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/commandes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/commandes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/connect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/connect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/connectcontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/connectcontrol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/homecontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/homecontrol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/listof.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/listof.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/listofcontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/listofcontrol.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/ESImeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ESImeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/IEsiMeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/IEsiMeal.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +102,8 @@
       <workItem from="1575913655590" duration="10363000" />
       <workItem from="1575930440850" duration="786000" />
       <workItem from="1575931346710" duration="604000" />
-      <workItem from="1575982587185" duration="2242000" />
+      <workItem from="1575982587185" duration="5181000" />
+      <workItem from="1575989435786" duration="527000" />
     </task>
     <servers />
   </component>

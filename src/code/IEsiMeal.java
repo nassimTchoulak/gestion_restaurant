@@ -4,127 +4,127 @@ package code;
 import java.util.*;
 
 
-public interface IEsiMeal {
-
-    // valueof used here
-    public void add_repas(String nom, boolean disponibilite, int nb_calories, double prix, Type_Repas type,int quant );
-
-    public void add_boisson(String nom, int nb_calories, double prix, String gout, String marque,Type_Boisson type,int quant);
-
-    public void add_supp(String nom, double prix, int nb_calories);
-
-    public boolean sincrire(Client r,String nom, String prenom, String numero, boolean etudiant, String code_fidelite);
+ public interface IEsiMeal {
 
 
-    /// making services
-    public Service com_event(String d,int nb,String deco,Events e);
+     void add_repas(String nom, boolean disponibilite, int nb_calories, double prix, Type_Repas type,int quant );
+
+     void add_boisson(String nom, int nb_calories, double prix, String gout, String marque,Type_Boisson type,int quant);
+
+     void add_supp(String nom, double prix, int nb_calories);
+
+     boolean sincrire(Client r,String nom, String prenom, String numero, boolean etudiant, String code_fidelite);
 
 
-    public Service com_C_surplace(String d,int nb,int t,String r);
 
-    public Service com_C_livre(String d,int nb,int dis, String adr);
+     Service com_event(String d,int nb,String deco,Events e);
+
+
+     Service com_C_surplace(String d,int nb,int t,String r);
+
+     Service com_C_livre(String d,int nb,int dis, String adr);
 
     ///connexion to enter
-    public Client connexion(String nom, String prenom, String numero, boolean etudiant);
+     Client connexion(String nom, String prenom, String numero, boolean etudiant);
 
-    public Client_fidele connect_get_client_fid(String code);
+     Client_fidele connect_get_client_fid(String code);
     /// reponse sur la confirmation
 
-    public String confirmation_msg(int id,Client cll,Service s);
+     String confirmation_msg(int id,Client cll,Service s);
 
-    public void save_in_files_cliens_fidele();
+     void save_in_files_cliens_fidele();
 
-    public void load_out_files_cliens_fidele();
+     void load_out_files_cliens_fidele();
 
-    public void save_all();
+     void save_all();
 
-    public ESImeal load_all();
+     IEsiMeal load_all();
 
 
-    public void save_in_files_cliens_n();
+     void save_in_files_cliens_n();
 
-    public void load_out_files_cliens_n();
+     void load_out_files_cliens_n();
 
-    public double mnt_reduction();
+     double mnt_reduction(); // total stat
 
     ;
-    public int nb_cmd();
+     int nb_cmd();
 
-    public double montant_tot();
+     double montant_tot(); // total stat
 
-    public double mnt_reduction_fidele();;
-    public double mnt_reduction_Etudiant();;
+     double mnt_reduction_fidele();; // total stat
+     double mnt_reduction_Etudiant();// total stat
 
 
-    public String getClientLePlusCommande ();
+     String getClientLePlusCommande (); //total_stat
 
-    public String getClientLePlusred ();
+     String getClientLePlusred ();
 
-    public String getClientLeMoinsCommande ();
+     String getClientLeMoinsCommande (); //total_stat
 
-    public void set_all_fortest(); // init method
+     void set_all_fortest(); // init method
 
-    public ArrayList<Repas> get_repass();
+     ArrayList<Repas> get_repass();
 
-    public TreeSet<Commande> getCom();
+     TreeSet<Commande> getCom();
 
-    public void setCom(TreeSet<Commande> com);
+     void setCom(TreeSet<Commande> com);
 
-    public TreeSet<Mois_jour> getEventdates();
+     TreeSet<Mois_jour> getEventdates();
 
-    public void setEventdates(TreeSet<Mois_jour> eventdates);
+     void setEventdates(TreeSet<Mois_jour> eventdates);
 
-    public int getNbcmd();
+     int getNbcmd();
 
-    public void setNbcmd(int nbcmd);
+     void setNbcmd(int nbcmd);
 
-    public HashMap<String, Client_fidele> getCliens();
+     HashMap<String, Client_fidele> getCliens();
 
-    public void setCliens(HashMap<String, Client_fidele> cliens);
+     void setCliens(HashMap<String, Client_fidele> cliens);
 
-    public HashMap<String, Client> getCliens_normal();
+     HashMap<String, Client> getCliens_normal();
 
-    public void setCliens_normal(HashMap<String, Client> cliens_normal);
+     void setCliens_normal(HashMap<String, Client> cliens_normal);
 
-    public HashMap<String, Repas> getMenu();
+     HashMap<String, Repas> getMenu();
 
-    public void setMenu(HashMap<String, Repas> menu);
+     void setMenu(HashMap<String, Repas> menu);
 
-    public HashMap<String, Boisson> getBois_v();
+     HashMap<String, Boisson> getBois_v();
 
-    public void setBois_v(HashMap<String, Boisson> bois_v);
+     void setBois_v(HashMap<String, Boisson> bois_v);
 
-    public HashMap<String, Supplement> getSupps();
+     HashMap<String, Supplement> getSupps();
 
-    public void setSupps(HashMap<String, Supplement> supps);
+     void setSupps(HashMap<String, Supplement> supps);
 
-    public HashMap<String, Integer> getQuant_menu();
+     HashMap<String, Integer> getQuant_menu();
 
-    public void setQuant_menu(HashMap<String, Integer> quant_menu);
+     void setQuant_menu(HashMap<String, Integer> quant_menu);
 
-    public HashMap<String, Integer> getQuant_bois();
+     HashMap<String, Integer> getQuant_bois();
 
-    public void setQuant_bois(HashMap<String, Integer> quant_bois);
+     void setQuant_bois(HashMap<String, Integer> quant_bois);
 
-    public HashMap<String, Events> getEvents();
+     HashMap<String, Events> getEvents();
 
-    public void setEvents(HashMap<String, Events> events);
+     void setEvents(HashMap<String, Events> events);
 
-    public HashMap<String, Type_Boisson> getBois();
+     HashMap<String, Type_Boisson> getBois();
 
-    public void setBois(HashMap<String, Type_Boisson> bois);
+     void setBois(HashMap<String, Type_Boisson> bois);
 
-    public HashMap<String, Type_Repas> getReps();
+     HashMap<String, Type_Repas> getReps();
 
-    public void setReps(HashMap<String, Type_Repas> reps);
+     void setReps(HashMap<String, Type_Repas> reps);
 
-    public HashMap<String, Place> getPlace();
+     HashMap<String, Place> getPlace();
 
-    public void setPlace(HashMap<String, Place> place);
+     void setPlace(HashMap<String, Place> place);
 
-    public TreeMap<Integer, Table> getTab();
+     TreeMap<Integer, Table> getTab();
 
-    public void setTab(TreeMap<Integer, Table> tab);
+     void setTab(TreeMap<Integer, Table> tab);
 }
 
 

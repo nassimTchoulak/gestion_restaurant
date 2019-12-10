@@ -1,16 +1,4 @@
 package code;
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -20,10 +8,11 @@ import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 import java.util.TreeSet;
-import java.util.regex.Pattern;
 
 
 public class ESImeal implements Serializable,IEsiMeal{
+
+	private IEsi_loader saver_loader = new EsiLoader_Serial() ;
 
 
 	private TreeSet<Commande> com = new TreeSet<Commande>();
@@ -208,188 +197,33 @@ public class ESImeal implements Serializable,IEsiMeal{
 			return "commande invalide";
 		}
 	}
+	// start new Interface
 
 	public void save_in_files_cliens_fidele() {
-		BufferedWriter out =null;
-		String ss="";
-		String cl;
-		Iterator it ;
-		int i;
-		Client_fidele ssl;
-
-		try {
-			out= new BufferedWriter(new FileWriter("cliens.txt"));
-			for (Entry<String, Client_fidele> entry : getCliens().entrySet())
-			{	 	 cl = entry.getKey();
-				ssl = entry.getValue();
-
-				ss= ssl.getNom()+ "-"+ssl.getPrenom() +"-"+ssl.getNumero() +"-"+ssl.isEtudiant() +"-"+ssl.getNb_commande()+"-"+ssl.get_codefid() +"|";
-				it = ssl.adresse.iterator();
-				while(it.hasNext()) {
-					ss=ss+it.next()+"*";
-				}
-				out.write(ss);
-				out.newLine();
-
-			}
-			out.flush();
-			out.close();
-
-		} catch (IOException e) {
-
-
-			//e.printStackTrace();
-		}
-
+		saver_loader.save_in_files_cliens_fidele(this);
 	}
 
 	public void load_out_files_cliens_fidele() {
-		try {
-			String ss;
-			String[] grad;
-			String[] object;
-			String[] adr;
-			Client_fidele kf;
-			int i;
-			ArrayList<String> ls = new ArrayList<String>();
-			BufferedReader in = new BufferedReader(new FileReader("cliens.txt"));
-			getCliens().clear();
-			ss=in.readLine();
-			while(ss!=null) {
-				grad=ss.split(Pattern.quote("|"));
-				object=grad[0].split(Pattern.quote("-"));
-				ls.clear();
-				try {
-					adr=grad[1].split(Pattern.quote("*"));
-					for(i=0;i<adr.length;i++) {
-						ls.add(adr[i]);
-					}
-
-				}
-				catch(Exception e) {
-
-				}
-				kf= new Client_fidele(object[0],object[1],object[2],Boolean.parseBoolean(object[3]),object[5]) ;
-				kf.adresse.addAll(ls);
-				kf.set_nb_cmd(Integer.parseInt(object[4]));
-				getCliens().put(object[4],kf );
-
-
-				ss=in.readLine();
-			}
-
-
-
-		}
-		catch(Exception e) {
-
-		}
+		saver_loader.load_out_files_cliens_fidele(this);
 	}
 
 	public void save_all() {
-
-		ESImeal ssl;
-		ssl=this;
-		ObjectOutputStream out;
-		try {
-			out= new ObjectOutputStream( new BufferedOutputStream(new FileOutputStream (new File("esimeal.txt") )));
-
-			out.writeObject(ssl);
-			out.flush();
-			out.close();
-
-		} catch (IOException e) {
-
-
-			//e.printStackTrace();
-		}
+		saver_loader.save_all(this);
 	}
-	public ESImeal load_all() {
-		ESImeal ssl;
-		ObjectInputStream in;
+	public IEsiMeal load_all() {
 
-
-		getCliens_normal().clear();
-		try {
-			in = new ObjectInputStream( new BufferedInputStream(new FileInputStream (new File("esimeal.txt") )));
-
-			ssl=((ESImeal)in.readObject());
-
-			return (ssl);
-
-
-
-
-
-		}
-		catch(Exception e) {
-			return null;
-		}
-
-
-
-
+		return saver_loader.load_all(this);
 
 	}
-
-
-
-
-
-
-
-
-
 
 
 	public void save_in_files_cliens_n() {
-
-		String ss="";
-		String cl;
-
-		int i;
-		Client ssl;
-		ObjectOutputStream out;
-		try {
-			out= new ObjectOutputStream( new BufferedOutputStream(new FileOutputStream (new File("client_normal.txt") )));
-
-			for (Entry<String, Client> entry : getCliens_normal().entrySet())
-			{	 	 cl = entry.getKey();
-				ssl = entry.getValue();
-				out.writeObject(ssl);
-
-
-			}
-			out.flush();
-			out.close();
-
-		} catch (IOException e) {
-
-
-			//e.printStackTrace();
-		}
+		saver_loader.save_in_files_cliens_n(this);
 
 	}
 
 	public void load_out_files_cliens_n() {
-		ObjectInputStream in;
-		Client ssl;
-		String key;
-		getCliens_normal().clear();
-		try {
-			in = new ObjectInputStream( new BufferedInputStream(new FileInputStream (new File("client_normal.txt") )));
-			while(true) {
-				ssl=((Client)in.readObject());
-				getCliens_normal().put(ssl.getNom()+ssl.getPrenom()+ssl.getNumero(), ssl);
-			}
-
-
-
-
-		}
-		catch(Exception e) {
-
-		}
+		saver_loader.load_out_files_cliens_n(this);
 	}
 
 	public double mnt_reduction(){
