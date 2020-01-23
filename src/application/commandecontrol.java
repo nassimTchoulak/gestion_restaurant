@@ -147,7 +147,7 @@ public class commandecontrol implements Initializable{
     
     private TableView<choice2> rt;
 
-    public IEsiMeal esi = new ESImeal();
+    public IEsiMeal esi = ESImeal.getInstance();
     
     public Client you;
     public Service now;

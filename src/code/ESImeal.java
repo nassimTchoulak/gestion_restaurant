@@ -19,6 +19,7 @@ public class ESImeal implements Serializable,IEsiMeal{
 	//private ESImeal () {}
 	public static ESImeal getInstance() { return instance;}
 
+
 	private IEsi_loader saver_loader = new EsiLoader_Serial() ;
 
 
@@ -41,7 +42,7 @@ public class ESImeal implements Serializable,IEsiMeal{
 	private HashMap<String,Place> place = new HashMap<String,Place>();
 	private TreeMap<Integer,Table> tab = new TreeMap<Integer,Table>();
 	///constructor
-	public ESImeal() {
+	private ESImeal() {
 
 		getEvents().put("anniversaire",Events.anniversaire);
 		getEvents().put("diplome",Events.diplome);
@@ -429,7 +430,7 @@ public class ESImeal implements Serializable,IEsiMeal{
 
 
 	public static void main(String[] args) {
-		ESImeal s = new ESImeal();
+		ESImeal s =  ESImeal.getInstance();
 
 		Service cs = s.com_C_surplace("2018-06-08 12:01",5, 1, "inter");
 

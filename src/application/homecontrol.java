@@ -22,7 +22,7 @@ import javafx.collections.FXCollections;
 
 public class homecontrol implements Initializable{
 	
-	private IEsiMeal esi = new ESImeal();
+	private IEsiMeal esi =  ESImeal.getInstance();
 	
 	TableView<choice6> info ;
 	
