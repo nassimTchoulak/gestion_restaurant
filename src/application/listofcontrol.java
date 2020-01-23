@@ -4,17 +4,9 @@ package application;
 
 import java.net.URL;
 import java.util.Iterator;
-import java.util.Map.Entry;
 import java.util.ResourceBundle;
 
-import code.C_surplace;
-import code.Client;
-import code.Commande;
-import code.ESImeal;
-import code.Evenement;
-import code.Met;
-import code.Repas;
-import code.Service;
+import code.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -28,13 +20,13 @@ public class listofcontrol implements Initializable {
 
     @FXML
     private AnchorPane mybase;
-    private ESImeal me;
+    private IEsiMeal me;
     private Client cc;
 
     private TableView<choice5> pt;
     
     
-    public void set_all(ESImeal s,Client c) {
+    public void set_all(IEsiMeal s, Client c) {
     	me=s;
     	cc=c;
     	pt.getItems().addAll(this.get_data());
@@ -43,7 +35,7 @@ public class listofcontrol implements Initializable {
     
     public ObservableList<choice5> get_data(){
     	ObservableList<choice5> ls = FXCollections.observableArrayList();
-    	Iterator<Commande> it = me.com.iterator();
+    	Iterator<Commande> it = me.getCom().iterator();
     	Commande verif;
     	while(it.hasNext()) {
     		verif =it.next();
@@ -79,7 +71,7 @@ public class listofcontrol implements Initializable {
     				setType("sur place");
     			}
     			else {
-    				setType("livré");
+    				setType("livrÃ©");
     			}
     		}
     		

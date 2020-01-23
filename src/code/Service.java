@@ -2,12 +2,13 @@ package code;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public abstract class Service implements Reduction,Serializable{
 	//protected String temps;
 	protected LocalDateTime date;
-	protected ArrayList<Met> menu;
+	private ArrayList<Met> menu;
 	protected int nb_personne;
 	
 	
@@ -18,9 +19,7 @@ public abstract class Service implements Reduction,Serializable{
 	public ArrayList<Met> get_list(){
 		return menu;
 	}
-	public void add_met(Met s) {
-		menu.add(s);
-	}
+
 	public void remove_menu(Met s) {
 		menu.remove(s);
 	}
@@ -47,4 +46,24 @@ public abstract class Service implements Reduction,Serializable{
 		nb_personne=nb;
 		menu = new ArrayList<Met>();
 	}
+	public double calculer_prix(){
+		Iterator<Met> it  = this.menu.iterator();
+		double p=0;
+		Met s;
+		System.out.println();
+		while( it.hasNext()){
+			s=it.next();
+			p=p+s.Calculer_prix();
+			System.out.println(p);
+		}
+		return(sur_plus(p));/// calcule prix avec surplus direct
+
+	}
+
+	public boolean add(Met m){
+		return this.menu.add(m);
+	}
+
+
+
 }

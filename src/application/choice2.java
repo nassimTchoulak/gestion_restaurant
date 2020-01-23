@@ -27,6 +27,10 @@ public class choice2 extends Repas{
 		return prix_to;
 	}
 
+	/*public String getNom(){
+		super.get
+	}*/
+
 	public void setPrix_to(double prix_to) {
 		this.prix_to = prix_to;
 	}

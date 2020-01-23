@@ -1,6 +1,7 @@
 package application;
 
 import code.ESImeal;
+import code.IEsiMeal;
 import code.Type_Boisson;
 import code.Type_Repas;
 import javafx.event.ActionEvent;
@@ -11,9 +12,9 @@ import javafx.scene.control.TextField;
 public class add_metcontrol {
 
 	
-	private ESImeal me;
+	private IEsiMeal me;
 	
-	public void set_all(ESImeal s) {
+	public void set_all(IEsiMeal s) {
 		me=s;
 	}
 	

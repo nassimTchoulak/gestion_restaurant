@@ -17,6 +17,7 @@ import code.Client;
 import code.Client_fidele;
 import code.Commande;
 import code.ESImeal;
+import code.IEsiMeal;
 import code.Events;
 import code.Met;
 import code.Repas;
@@ -27,7 +28,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -147,7 +147,7 @@ public class commandecontrol implements Initializable{
     
     private TableView<choice2> rt;
 
-    public ESImeal esi = new ESImeal();
+    public IEsiMeal esi = ESImeal.getInstance();
     
     public Client you;
     public Service now;
@@ -313,7 +313,7 @@ public class commandecontrol implements Initializable{
 		Repas ssl;
 		
 		ObservableList<choice1> ls = FXCollections.observableArrayList();
-		for (Entry<String,Repas> entry : esi.menu.entrySet())
+		for (Entry<String,Repas> entry : esi.getMenu().entrySet())
 		{	 	 
 					ssl = entry.getValue();  
 					ls.add( new choice1(ssl,esi,tt,rt));
@@ -326,7 +326,7 @@ public class commandecontrol implements Initializable{
        Boisson ssl;
 		
 		ObservableList<choice4> ls = FXCollections.observableArrayList();
-		for (Entry<String, Boisson> entry : esi.bois_v.entrySet())
+		for (Entry<String, Boisson> entry : esi.getBois_v().entrySet())
 		{	 	 
 					ssl = entry.getValue();  
 					ls.add( new choice4(ssl,in));
@@ -381,14 +381,14 @@ public class commandecontrol implements Initializable{
     	for (choice3 c1 : in.getItems()) {
     	    // do something with c
     		System.out.println(c1.getNom());
-    		men.add(esi.bois_v.get(c1.getNom()));
+    		men.add(esi.getBois_v().get(c1.getNom()));
     	}
     	Repas rrt;
     	
     	for (choice2 c : rt.getItems()) {
     		HashSet<Supplement> todo = new HashSet<Supplement>();
     	    // do something with c
-    		rrt =new Repas(c.getNom(),true, esi.menu.get(c.getNom()).getNb_calories(), esi.menu.get(c.getNom()).getPrix(),esi.menu.get(c.getNom()).getType());
+    		rrt =new Repas(c.getNom(),true, esi.getMenu().get(c.getNom()).getNb_calories(), esi.getMenu().get(c.getNom()).getPrix(), esi.getMenu().get(c.getNom()).getType());
     		System.out.println(c.getNom()+" "+c.getAffs().substring(1,c.getAffs().length()-1));
     		todo.clear();
     		tab = c.getAffs().substring(1,c.getAffs().length()-1).split(Pattern.quote(","));
@@ -398,7 +398,7 @@ public class commandecontrol implements Initializable{
     			//System.out.println(this.esi.supps.get(tab[i]).getNom());
     			if(!tab[i].isEmpty()) {
     				System.out.println(tab[i]);
-    				todo.add(this.esi.supps.get(tab[i]));
+    				todo.add(this.esi.getSupps().get(tab[i]));
     			}
     			//rrt.add_supplement(this.esi.supps.get(tab[i]));
     			//todo.add(this.esi.supps.get(tab[i]));
@@ -446,15 +446,14 @@ public class commandecontrol implements Initializable{
     		System.out.println(var.Calculer_prix());
     	}
     	
-    	this.cmdnow = new Commande(esi.nbcmd,you,ee);
-    	esi.nbcmd++;
+    	this.cmdnow = new Commande(esi.getNbcmd(),you,ee);
+    	esi.setNbcmd(esi.getNbcmd() + 1);
     	//System.out.println(cmdnow.calculer_prix());
      	this.r.setText( String.valueOf(cmdnow.calculer_reduction(you))); 
     	this.ap.setText(String.valueOf(cmdnow.prix_a_payer(you)));
     	this.psr.setText(String.valueOf(cmdnow.calculer_prix()));
     	this.my_answer.setText("veuillez entrez votre commande");
-    
-    
+
     }
     @FXML
     void check_out(ActionEvent event) {
@@ -463,7 +462,7 @@ public class commandecontrol implements Initializable{
     	my_answer.setText(esi.confirmation_msg(cmdnow.getid(),you,cmdnow.getService()));
     }
     
-    public void set_all(ESImeal u,Client r) {
+    public void set_all(IEsiMeal u,Client r) {
     	this.esi=u;
     	you=r;
     	
@@ -486,7 +485,7 @@ public class commandecontrol implements Initializable{
     	}
     	//this.adr.getItems()
     	System.out.println("done here");
-     	Set s = esi.tab.keySet();
+     	Set s = esi.getTab().keySet();
     	Iterator<Integer> it4 = s.iterator();
     	while(it4.hasNext()) {
     		this.table_int.getItems().add(it4.next().toString());
@@ -506,7 +505,7 @@ public class commandecontrol implements Initializable{
     	String s =this.registration.getText();
     	if(this.esi.sincrire(you,you.getNom(), you.getPrenom(), you.getNumero(), you.isEtudiant(), s)){
     		this.my_answer.setText("vous etes maintenant un client fidele");
-    		you = esi.cliens.get(s);
+    		you = esi.getCliens().get(s);
     	}
     }
     @FXML
