@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="49eeaa0a-d779-4444-9f56-d5884ea154a2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/code/IEsiMeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/IEsiMeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/application/homecontrol.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/application/homecontrol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/Commande.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/code/Commande.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/ESImeal.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/code/ESImeal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/code/IEsiMeal.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/code/IEsiMeal.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/commandecontrol.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/commandecontrol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/Commande.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/Commande.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/code/ESImeal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/code/ESImeal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tp_interface2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tp_interface2.iml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,27 +30,20 @@
   </component>
   <component name="ProjectId" id="1U3cW6rRDRCKLUycmK5GXXASbT4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/jre1.8.0_221/lib" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="ESImeal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -82,6 +81,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -104,6 +115,9 @@
       <workItem from="1575931346710" duration="604000" />
       <workItem from="1575982587185" duration="5181000" />
       <workItem from="1575989435786" duration="527000" />
+      <workItem from="1576481927373" duration="207000" />
+      <workItem from="1579730079446" duration="3116000" />
+      <workItem from="1579776230566" duration="1307000" />
     </task>
     <servers />
   </component>
@@ -127,5 +141,39 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/gestion_resorant" />
     </ignored-roots>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1238" height="84" key="GridCell.Tab.0.bottom" timestamp="1579733622735">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="84" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579733622735" />
+    <state width="1238" height="84" key="GridCell.Tab.0.center" timestamp="1579733622734">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="84" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579733622734" />
+    <state width="1238" height="84" key="GridCell.Tab.0.left" timestamp="1579733622731">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="84" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579733622731" />
+    <state width="1238" height="84" key="GridCell.Tab.0.right" timestamp="1579733622735">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state width="1238" height="84" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579733622735" />
+    <state x="128" y="0" key="SettingsEditor" timestamp="1579731945020">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="128" y="0" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1579731945020" />
+    <state x="317" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1579776335603">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="317" y="232" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579776335603" />
+    <state x="17" y="23" width="1246" height="723" key="new project wizard" timestamp="1576482133396">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="17" y="23" width="1246" height="723" key="new project wizard/0.0.1280.800@0.0.1280.800" timestamp="1576482133396" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1579731593485">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1579731593485" />
   </component>
 </project>

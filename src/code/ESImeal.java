@@ -12,6 +12,13 @@ import java.util.TreeSet;
 
 public class ESImeal implements Serializable,IEsiMeal{
 
+
+
+
+	private static ESImeal instance = new ESImeal();
+	//private ESImeal () {}
+	public static ESImeal getInstance() { return instance;}
+
 	private IEsi_loader saver_loader = new EsiLoader_Serial() ;
 
 

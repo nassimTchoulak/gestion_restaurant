@@ -1,104 +1,102 @@
 package code;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.ArrayList;
-import java.io.*;
-public class Commande implements Comparable<Commande>, Serializable{
-	
-private int id;
 
-private Service service;
-private String client_code;
-private Client client;
-private boolean vip; // si client d'un client fidele ou pas 
+import java.io.Serializable;
 
-public Service getService(){
-	return  service;
-}
+public class Commande implements Comparable<Commande>, Serializable {
 
-public Commande(int id,Client c ,Service s) {
-	this.id=id;
-	this.client = c ;
-	client_code=c.getNom()+c.getPrenom()+c.getNumero();
-	service=s;
+    private int id;
 
-	if(c instanceof Client_fidele){
-		vip=true;
-	}
-	else{
-		vip = false ;
-	}
-}
-public int getid() {
-	return id;
-}
+    private Service service;
+    private String client_code;
+    private Client client;
+    private boolean vip; // si client d'un client fidele ou pas
 
+    public Commande(int id, Client c, Service s) {
+        this.id = id;
+        this.client = c;
+        client_code = c.getNom() + c.getPrenom() + c.getNumero();
+        service = s;
 
-public void ajouter_met(Met met) {
-	try{
-	service.add(met);}
-	catch (Exception e){
-		
-	}
-	
-}
+        if (c instanceof Client_fidele) {
+            vip = true;
+        } else {
+            vip = false;
+        }
+    }
+
+    public Service getService() {
+        return service;
+    }
+
+    public int getid() {
+        return id;
+    }
 
 
-public void supp_met(Met met){
-	try{
-		service.remove_menu(met);}
-		catch (Exception e){
-			
-		}
-}
-public double calculer_prix(){
+    public void ajouter_met(Met met) {
+        try {
+            service.add(met);
+        } catch (Exception e) {
 
-	return(service.calculer_prix());/// calcule prix avec surplus direct
-	
-}
-		
-public double calculer_reduction(Client client) {// send client from hash map in parameter
-	return client.reduction()+service.reduction();
-}
+        }
+
+    }
 
 
-public double prix_a_payer(Client client) {
-	return calculer_prix()*(1-calculer_reduction(client));
-}
+    public void supp_met(Met met) {
+        try {
+            service.remove_menu(met);
+        } catch (Exception e) {
+
+        }
+    }
+
+    public double calculer_prix() {
+
+        return (service.calculer_prix());/// calcule prix avec surplus direct
+
+    }
+
+    public double calculer_reduction(Client client) {// send client from hash map in parameter
+        return client.reduction() + service.reduction();
+    }
 
 
-public void set_client(String s) {
-	client_code=s;
-}
-public String get_client() {
-	return client_code;
-}
-public boolean get_vip() {
-	return vip;
-}
+    public double prix_a_payer(Client client) {
+        return calculer_prix() * (1 - calculer_reduction(client));
+    }
 
-public boolean equals(Commande k) {
-	if( k.id==this.id) {
-		return true;
-	}
-	else {
-		return false;
-	}
-}
-public int compareTo(Commande k ) {
-	return this.service.get_real_date().compareTo(k.service.get_real_date());
-}
-public Client getClient() {
-	return client;
-}
-public void setClient(Client client) {
-	this.client = client;
-}
+    public String get_client() {
+        return client_code;
+    }
 
+    public void set_client(String s) {
+        client_code = s;
+    }
 
+    public boolean get_vip() {
+        return vip;
+    }
 
+    public boolean equals(Commande k) {
+        if (k.id == this.id) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    public int compareTo(Commande k) {
+        return this.service.get_real_date().compareTo(k.service.get_real_date());
+    }
 
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
 
 
 }

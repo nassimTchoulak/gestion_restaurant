@@ -453,8 +453,7 @@ public class commandecontrol implements Initializable{
     	this.ap.setText(String.valueOf(cmdnow.prix_a_payer(you)));
     	this.psr.setText(String.valueOf(cmdnow.calculer_prix()));
     	this.my_answer.setText("veuillez entrez votre commande");
-    
-    
+
     }
     @FXML
     void check_out(ActionEvent event) {
